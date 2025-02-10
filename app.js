@@ -1,3 +1,8 @@
+if(process.env.node_env!="production"){
+  require('dotenv').config();
+}
+
+
 const express=require("express");
 const app = express();
 const mongoose =require("mongoose");
@@ -11,6 +16,7 @@ const flash=require("connect-flash");
 const passport=require("passport");
 const localStrategy=require("passport-local");
 const User=require("./models/user.js");
+
 
 
 
@@ -33,6 +39,26 @@ app.use(methodOverride("_method"));
 app.engine("ejs",ejsMate);
 app.use(express.static(path.join(__dirname, "public")));
 
+// const store = MongoStore.create({
+//   mongoUrl: dbUrl,
+//   crypto: {
+//     secret: "mysupersecretcode"
+//   },
+//   touchAfter: 24 * 3600,
+// });
+
+// const sessionOptions = {
+//   store,
+//   secret: "mysupersecretcode",
+//   resave: false,
+//   saveUninitialized: true,
+//   cookie: {
+//     expires: Date.now() + 7 * 24 * 60 * 60 * 1000,
+//     maxAge: 7 * 24 * 60 * 60 * 1000,
+//     httpOnly: true,
+//   }
+// };
+
 const sessionOption = {
     secret: "mycode",
     resave: false,
@@ -45,9 +71,9 @@ const sessionOption = {
    
 };
 
-app.get("/",(req,res)=>{
-    res.send("Hii this is root");
-});
+// app.get("/",(req,res)=>{
+//     res.send("Hii this is root");
+// });
 
 app.use(session(sessionOption));
 app.use(flash());
@@ -101,20 +127,7 @@ app.post("/login",
     req.flash("success", "Welcome back!");
     res.redirect("/listings");
   });
-//signup
-  // app.get("/signup", (req, res) => {
-  //   res.render("signup.ejs");
-  // });
-  
-  // app.post("/signup",
-  //   passport.authenticate("local", {
-  //     failureFlash: true,
-  //     failureRedirect: "/signup",
-  //   }),
-  //   (req, res) => {
-  //     req.flash("success", "Welcome back!");
-  //     res.redirect("/listings");
-  //   });
+
 
   
 

@@ -30,6 +30,22 @@
         <div class="mb-3 mt-3">
           <lable for ="rating" class="form-lable">Rating</lable>
           <input type="range" min="1" max="5" id="rating" name="review[rating]" class="form-range"/>
+
+          <fieldset class="starability-slot">
+            <legend>First rating:</legend>
+            <input type="radio" id="no-rate" class="input-no-rate" name="rating" value="0" checked aria-label="No rating." />
+            <input type="radio" id="first-rate1" name="rating" value="1" />
+            <label for="first-rate1" title="Terrible">1 star</label>
+            <input type="radio" id="first-rate2" name="rating" value="2" />
+            <label for="first-rate2" title="Not good">2 stars</label>
+            <input type="radio" id="first-rate3" name="rating" value="3" />
+            <label for="first-rate3" title="Average">3 stars</label>
+            <input type="radio" id="first-rate4" name="rating" value="4" />
+            <label for="first-rate4" title="Very good">4 stars</label>
+            <input type="radio" id="first-rate5" name="rating" value="5" />
+            <label for="first-rate5" title="Amazing">5 stars</label>
+          </fieldset>
+          
           <div class="mb-3 mt-3">
             <lable for="comment" class="form-lable">Comments!! </lable>
             <textarea
@@ -43,10 +59,35 @@
             <div class="invalid-feedback">Please enter your Review!!</div>
           </div>
           
+          
         </div>
         
         <button class="btn btn-outline-dark">Submit</button>
       </form>
       <hr/>
       <h4>All reviews</h4>
+         
+    <hr/>
+    <h4>Location Map</h4>
+    <div id="map" style="height: 400px;"></div>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var map = L.map('map').setView(["<%= listing.latitude %>", "<%= listing.longitude %>"], 13);
+            
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+            
+            L.marker(["<%= listing.latitude %>", "<%= listing.longitude %>"]).addTo(map)
+                .bindPopup('<b><%= listing.title %></b><br><%= listing.location %>')
+                .openPopup();
+        });
+    </script>
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
+
+
+
