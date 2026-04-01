@@ -65,14 +65,7 @@ cd wanderlust
 npm install
 🔐 Setup Environment Variables
 
-Create .env file:
 
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_KEY=your_key
-CLOUDINARY_SECRET=your_secret
-
-DB_URL=your_mongodb_uri
-SESSION_SECRET=your_secret
 ▶️ Run App
 npm start
 
@@ -96,12 +89,6 @@ npm start
 
 Contributions are welcome!
 Feel free to fork this repo and submit a PR.
-
-📬 Contact
-
-👤 Sumit Kumar
-📧 Email: (your email)
-🔗 LinkedIn: (your link)
 
 ⭐ Support
 
