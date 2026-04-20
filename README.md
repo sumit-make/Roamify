@@ -59,7 +59,7 @@ WanderLust/
 └── package.json
 ⚙️ Getting Started
 🔽 Clone Repository
-git clone https://github.com/your-username/wanderlust.git
+git clone https://github.com/sumit-make/wanderlust.git
 cd wanderlust
 📦 Install Dependencies
 npm install
@@ -69,7 +69,7 @@ npm install
 ▶️ Run App
 npm start
 
-🌐 Open: http://localhost:3000
+🌐 Open: http://localhost:8080
 
 🎯 Key Highlights
 ⚡ Real-world scalable backend using MVC
