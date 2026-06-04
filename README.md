@@ -1,4 +1,4 @@
-<img width="1912" height="940" alt="image" src="https://github.com/user-attachments/assets/29b243e3-f662-4774-b999-02ebae8da2bd" /><div align="center">
+<img width="1917" height="971" alt="Screenshot 2026-06-04 133829" src="https://github.com/user-attachments/assets/ba14cd2e-544a-4107-a502-6003775cbbc5" /><img width="1917" height="971" alt="Screenshot 2026-06-04 133829" src="https://github.com/user-attachments/assets/0daf6b6f-8471-446b-bcbf-f4090f12d7bc" /><img width="1913" height="958" alt="Screenshot 2026-06-04 133302" src="https://github.com/user-attachments/assets/9308c6b4-28c8-4e02-9a80-024f02b59ccd" /><img width="1912" height="940" alt="image" src="https://github.com/user-attachments/assets/29b243e3-f662-4774-b999-02ebae8da2bd" /><div align="center">
 
 # 🏡 Romify
 
@@ -226,8 +226,9 @@ npm start
 
 Add your project screenshots here.
 
-![Uploading Screenshot 2026-06-04 133302.png…]()
-![Uploading Screenshot 2026-06-04 133415.png…]()
+<img width="1917" height="971" alt="Screenshot 2026-06-04 133829" src="https://github.com/user-attachments/assets/a9deef6c-d559-4aed-8417-13c466c6a1fc" />
+
+
 <img width="1912" height="940" alt="Screenshot 2026-06-04 133431" src="https://github.com/user-attachments/assets/48b12ab8-fac9-4c49-b963-aec84557135b" />
 
 
