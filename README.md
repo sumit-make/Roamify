@@ -1,281 +1,284 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Movie Recommendation Engine</title>
-</head>
-<body>
+<div align="center">
 
-<h1 align="center">🎬 Movie Recommendation Engine</h1>
+# 🏡 Romify
 
-<p align="center">
-  <strong>An Intelligent Movie Recommendation System Powered by Machine Learning</strong>
-</p>
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Python-3.9+-blue?style=for-the-badge&logo=python" />
-  <img src="https://img.shields.io/badge/Machine%20Learning-Recommendation%20System-green?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Dataset-5000%20Movies-orange?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/TMDB-API-blueviolet?style=for-the-badge" />
-  <img src="https://img.shields.io/badge/Similarity-Cosine%20Similarity-red?style=for-the-badge" />
-</p>
-
-<hr>
-
-<h2>📌 Project Overview</h2>
+### Discover • Explore • Experience
 
 <p>
-The <strong>Movie Recommendation Engine</strong> is a Machine Learning-based web application that recommends the <strong>Top 5 most similar movies</strong> based on the movie selected by the user.
+A modern full-stack accommodation marketplace built with the MERN ecosystem, enabling users to discover unique stays, create listings, share experiences through reviews, and manage properties through a secure and seamless platform.
 </p>
 
-<p>
-Using <strong>Content-Based Filtering</strong> and <strong>Cosine Similarity</strong>, the system analyzes various movie attributes such as genres, keywords, cast, crew, and movie descriptions to find movies with similar characteristics.
-</p>
+<img src="https://img.shields.io/badge/Node.js-Backend-green?style=for-the-badge&logo=node.js">
+<img src="https://img.shields.io/badge/Express.js-Framework-black?style=for-the-badge&logo=express">
+<img src="https://img.shields.io/badge/MongoDB-Database-green?style=for-the-badge&logo=mongodb">
+<img src="https://img.shields.io/badge/EJS-Templating-red?style=for-the-badge">
+<img src="https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript">
+<img src="https://img.shields.io/badge/Passport.js-Authentication-blue?style=for-the-badge">
+<img src="https://img.shields.io/badge/Cloudinary-Image_Storage-orange?style=for-the-badge">
 
-<p>
-To enhance the user experience, the application integrates the <strong>TMDB API</strong> to dynamically fetch movie posters and additional movie information.
-</p>
+<br><br>
 
-<hr>
+<h3>🚀 Full-Stack Property Rental Platform</h3>
 
-<h2>✨ Features</h2>
+</div>
 
-<ul>
-    <li>🎥 Recommend Top 5 Similar Movies Instantly</li>
-    <li>🧠 Machine Learning-Based Recommendation System</li>
-    <li>📊 Uses Cosine Similarity for Accurate Recommendations</li>
-    <li>🖼️ Fetches Movie Posters Using TMDB API</li>
-    <li>⚡ Fast and Interactive User Interface</li>
-    <li>📚 Trained on a Dataset of 5,000 Movies</li>
-    <li>🔍 Content-Based Filtering Approach</li>
-    <li>📱 Responsive and User-Friendly Design</li>
-</ul>
+---
 
-<hr>
+## 🌟 About The Project
 
-<h2>🛠️ Tech Stack</h2>
+Romify is a feature-rich accommodation marketplace that allows users to discover unique stays, create and manage property listings, upload images, and share experiences through reviews.
+
+Built using modern web technologies and following the MVC architecture, the platform delivers a scalable, secure, and user-friendly experience.
+
+---
+
+## ✨ Key Features
+
+### 🔐 Authentication & Security
+- Secure User Registration & Login
+- Passport.js Authentication
+- Session Management
+- Cookie-Based Authentication
+- Protected Routes & Authorization
+
+### 🏠 Listing Management
+- Create New Listings
+- Edit Existing Listings
+- Delete Listings
+- Detailed Listing Pages
+- Dynamic Image Uploads
+
+### ⭐ Reviews & Feedback
+- Add Reviews
+- Delete Reviews
+- User Interaction System
+- Real-Time Feedback Experience
+
+### ☁️ Cloud Integration
+- Cloudinary Image Storage
+- Optimized Media Delivery
+- Secure Image Management
+- Scalable Cloud Infrastructure
+
+### 🎨 User Experience
+- Responsive EJS Templates
+- Flash Messages
+- Clean UI Design
+- Mobile-Friendly Layout
+
+---
+
+## 🛠️ Tech Stack
 
 <table>
-    <tr>
-        <th>Technology</th>
-        <th>Purpose</th>
-    </tr>
-    <tr>
-        <td>Python</td>
-        <td>Core Programming Language</td>
-    </tr>
-    <tr>
-        <td>Pandas</td>
-        <td>Data Processing & Analysis</td>
-    </tr>
-    <tr>
-        <td>NumPy</td>
-        <td>Numerical Computations</td>
-    </tr>
-    <tr>
-        <td>Scikit-Learn</td>
-        <td>Cosine Similarity & Vectorization</td>
-    </tr>
-    <tr>
-        <td>TMDB API</td>
-        <td>Movie Posters & Details</td>
-    </tr>
-    <tr>
-        <td>Streamlit</td>
-        <td>Frontend Web Interface</td>
-    </tr>
+<tr>
+<td align="center"><b>Frontend</b></td>
+<td>HTML5, CSS3, JavaScript, EJS</td>
+</tr>
+
+<tr>
+<td align="center"><b>Backend</b></td>
+<td>Node.js, Express.js</td>
+</tr>
+
+<tr>
+<td align="center"><b>Database</b></td>
+<td>MongoDB, Mongoose</td>
+</tr>
+
+<tr>
+<td align="center"><b>Authentication</b></td>
+<td>Passport.js, Express Session, Cookies</td>
+</tr>
+
+<tr>
+<td align="center"><b>Cloud Services</b></td>
+<td>Cloudinary</td>
+</tr>
+
+<tr>
+<td align="center"><b>Architecture</b></td>
+<td>MVC Pattern</td>
+</tr>
 </table>
 
-<hr>
+---
 
-<h2>📂 Dataset Information</h2>
+## 🏗️ Project Architecture
 
-<ul>
-    <li>📌 Source: Kaggle Movie Dataset</li>
-    <li>🎬 Total Movies: 5,000+</li>
-    <li>📈 Data Includes:
-        <ul>
-            <li>Movie Titles</li>
-            <li>Genres</li>
-            <li>Keywords</li>
-            <li>Cast Members</li>
-            <li>Directors</li>
-            <li>Movie Overview</li>
-        </ul>
-    </li>
-</ul>
+```text
+Client
+   │
+   ▼
+Routes
+   │
+   ▼
+Controllers
+   │
+   ▼
+Models (MongoDB)
+   │
+   ▼
+Views (EJS)
+```
 
-<hr>
+---
 
-<h2>⚙️ How It Works</h2>
+## 📂 Project Structure
 
-<h3>1️⃣ Data Preprocessing</h3>
+```bash
+Romify/
+│
+├── controllers/
+├── models/
+├── routes/
+├── middleware/
+├── utils/
+├── public/
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── views/
+│   ├── layouts/
+│   ├── listings/
+│   ├── users/
+│   └── includes/
+│
+├── app.js
+├── package.json
+└── README.md
+```
 
-<ul>
-    <li>Cleaned and merged movie datasets.</li>
-    <li>Handled missing values.</li>
-    <li>Combined important movie features into a single text column.</li>
-</ul>
+---
 
-<h3>2️⃣ Feature Engineering</h3>
+## 🚀 Installation
 
-<ul>
-    <li>Extracted relevant movie attributes.</li>
-    <li>Created a "tags" feature representing each movie.</li>
-</ul>
+### Clone the Repository
 
-<h3>3️⃣ Vectorization</h3>
+```bash
+git clone https://github.com/your-username/romify.git
+```
 
-<ul>
-    <li>Converted textual data into numerical vectors using Count Vectorizer.</li>
-</ul>
+### Navigate to the Project Directory
 
-<h3>4️⃣ Similarity Calculation</h3>
+```bash
+cd romify
+```
 
-<ul>
-    <li>Applied <strong>Cosine Similarity</strong> to calculate similarity scores between movies.</li>
-</ul>
+### Install Dependencies
 
-<h3>5️⃣ Recommendation Generation</h3>
+```bash
+npm install
+```
 
-<ul>
-    <li>When a user selects a movie, the system finds the most similar movies and recommends the top 5 matches.</li>
-</ul>
+### Configure Environment Variables
 
-<hr>
+Create a `.env` file:
 
-<h2>🧮 Recommendation Formula</h2>
+```env
+ATLASDB_URL=your_mongodb_connection_string
 
-<p>Cosine Similarity measures the angle between two movie vectors:</p>
+CLOUD_NAME=your_cloudinary_name
+CLOUD_API_KEY=your_cloudinary_api_key
+CLOUD_API_SECRET=your_cloudinary_api_secret
 
-<pre>
-Cosine Similarity(A,B) =
+SECRET=your_session_secret
+```
 
-        A · B
-----------------------
-||A|| × ||B||
-</pre>
+### Start the Application
 
-<p>
-A higher cosine similarity score indicates that two movies share more similar characteristics.
-</p>
+```bash
+node app.js
+```
 
-<hr>
+or
 
-<h2>🖼️ Application Workflow</h2>
+```bash
+npm start
+```
 
-<pre>
-User Selects Movie
-        ↓
-Movie Features Extracted
-        ↓
-Vector Representation
-        ↓
-Cosine Similarity Calculation
-        ↓
-Top 5 Similar Movies Identified
-        ↓
-TMDB API Fetches Posters
-        ↓
-Recommendations Displayed
-</pre>
+---
 
-<hr>
+## 🎯 Key Highlights
 
-<h2>🚀 Installation & Setup</h2>
+✅ Full-Stack MERN Application
 
-<h3>Clone Repository</h3>
+✅ Secure Authentication System
 
-<pre>
-git clone https://github.com/your-username/movie-recommendation-engine.git
+✅ RESTful API Design
 
-cd movie-recommendation-engine
-</pre>
+✅ Cloud-Based Image Management
 
-<h3>Install Dependencies</h3>
+✅ Responsive User Interface
 
-<pre>
-pip install -r requirements.txt
-</pre>
+✅ Scalable MVC Architecture
 
-<h3>Run Application</h3>
+✅ MongoDB Database Integration
 
-<pre>
-streamlit run app.py
-</pre>
+✅ Flash Messaging System
 
-<hr>
+✅ Production-Level Project Structure
 
-<h2>📸 Screenshots</h2>
+---
 
-<p align="center">
+## 📸 Screenshots
+
 Add your project screenshots here.
-</p>
 
-<pre>
+```text
 screenshots/
 │
-├── home.png
-├── recommendations.png
-└── movie-posters.png
-</pre>
+├── homepage.png
+├── listings.png
+├── property-details.png
+├── login.png
+└── reviews.png
+```
 
-<hr>
+---
 
-<h2>🎯 Learning Outcomes</h2>
+## 📚 Learning Outcomes
 
-<ul>
-    <li>Understanding Recommendation Systems</li>
-    <li>Content-Based Filtering Techniques</li>
-    <li>Feature Engineering for ML Applications</li>
-    <li>Vectorization of Text Data</li>
-    <li>Cosine Similarity Implementation</li>
-    <li>Working with Real-World APIs</li>
-    <li>Deploying ML Projects</li>
-</ul>
+- Full-Stack Development
+- RESTful API Development
+- Authentication & Authorization
+- MongoDB Data Modeling
+- Cloudinary Integration
+- Session & Cookie Management
+- MVC Architecture
+- Scalable Application Design
 
-<hr>
+---
 
-<h2>🔮 Future Improvements</h2>
+## 🔮 Future Enhancements
 
-<ul>
-    <li>⭐ Hybrid Recommendation System</li>
-    <li>⭐ User-Based Collaborative Filtering</li>
-    <li>⭐ Deep Learning Recommendations</li>
-    <li>⭐ Personalized User Profiles</li>
-    <li>⭐ Watchlist Feature</li>
-    <li>⭐ Movie Ratings & Reviews Integration</li>
-</ul>
+- 🔍 Advanced Search & Filters
+- 🗺️ Interactive Maps
+- ❤️ Wishlist Feature
+- 💳 Payment Integration
+- 📱 Progressive Web App
+- 🔔 Real-Time Notifications
+- 🌐 Multi-Language Support
 
-<hr>
+---
 
-<h2>🏆 Project Highlights</h2>
+## 👨‍💻 Developer
 
-<ul>
-    <li>📊 Trained on 5,000+ Movies Dataset</li>
-    <li>⚡ Real-Time Recommendations</li>
-    <li>🎯 Top 5 Similar Movie Suggestions</li>
-    <li>🧠 Machine Learning Powered</li>
-    <li>🎬 Integrated TMDB API</li>
-    <li>🚀 Practical Industry-Level Recommendation Logic</li>
-</ul>
+### Sumit Kumar
 
-<hr>
+**B.Tech Undergraduate | NIT Kurukshetra**
 
-<h2>👨‍💻 Author</h2>
+💻 Full Stack Developer  
+🤖 Machine Learning Enthusiast  
+🌟 Open Source Contributor
 
-<p>
-<strong>Sumit Kumar</strong><br>
-B.Tech, National Institute of Technology Kurukshetra<br>
-Machine Learning | Web Development | Open Source Enthusiast
-</p>
+---
 
-<hr>
+<div align="center">
 
-<p align="center">
-⭐ If you like this project, don't forget to give it a Star on GitHub! ⭐
-</p>
+### ⭐ If you like this project, consider giving it a star!
 
-</body>
-</html>
+Built with ❤️ using Node.js, Express.js, MongoDB, EJS, Passport.js & Cloudinary
+
+</div>
