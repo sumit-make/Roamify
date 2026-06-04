@@ -1,5 +1,4 @@
-
-
+<div align="center">
 # 🏡 Romify
 
 ### Discover • Explore • Experience
