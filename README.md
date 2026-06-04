@@ -1,4 +1,4 @@
-<img width="1917" height="971" alt="Screenshot 2026-06-04 133829" src="https://github.com/user-attachments/assets/ba14cd2e-544a-4107-a502-6003775cbbc5" /><img width="1912" height="940" alt="image" src="https://github.com/user-attachments/assets/29b243e3-f662-4774-b999-02ebae8da2bd" /><div align="center">
+
 
 # 🏡 Romify
 
