@@ -31,13 +31,16 @@ const listingSchema = new Schema({
     price: Number,
 
     image: {
-      url:String,
-      filename:String,
       type: String,
-      default: "https://images.pexels.com/photos/4258279/pexels-photo-4258279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      
-      set: (v) => (v === "" ? "https://images.pexels.com/photos/4258279/pexels-photo-4258279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" : v),
+      default:
+        "https://images.pexels.com/photos/4258279/pexels-photo-4258279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      set: (v) =>
+        v === "" || v == null
+          ? "https://images.pexels.com/photos/4258279/pexels-photo-4258279.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+          : v,
     },
+    latitude: Number,
+    longitude: Number,
 
     
     reviews:[

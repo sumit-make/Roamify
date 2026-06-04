@@ -1,11 +1,11 @@
 <% layout("/layouts/boilerplate") %>
 <body>
-  <% if (success) { %>
+  <!-- <% if (success) { %>
     <div class="alert alert-success alert-dismissible fade show col-6 offset-3" role="alert">
      New listing created
      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
     </div>
-<% } %>
+<% } %> -->
 <style>
   .filters{
     margin-top: 3px;
@@ -30,9 +30,9 @@
   .toggle{
     border-radius: 1rem;
     border: 1px solid black;
-    height: 3.2rem;
+    height: 3.rem;
     padding: 1rem;
-    margin-left: 2rem;
+    margin-left: auto;
     display: flex;
     align-items: center;
   }
@@ -70,7 +70,7 @@
   
 
    <div class="filter">
-    <i class="fa-regular fa-tractor"></i>
+    <i class="fa-solid fa-truck-fast"></i>
     <p>Farms</p>
   </div>
 
@@ -86,6 +86,17 @@
     <i class="fa-sharp fa-solid fa-igloo"></i>
     <p>Domes</p>
   </div>
+
+  <div class="filter">
+    <i class="fa-brands fa-phoenix-framework"></i>
+    <p>farms</p>
+  </div>
+
+  <div class="filter">
+    <i class="fa-solid fa-face-smile"></i>
+    <p>Tiny home</p>
+  </div>
+ 
 <div class="toggle">
   <div class="form-check form-switch form-check-reverse">
     <input class="form-check-input" 

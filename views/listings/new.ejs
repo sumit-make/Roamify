@@ -29,15 +29,15 @@
             <div class="mb-3">
                 <label for="title" class="form-label">Title</label>
                 <input id="title" name="listing[title]" placeholder="Enter title" type="text" class="form-control" required>
-                <div class="valid-feedback">It look like good</div>
+                <div class="valid-feedback">Looks good!</div>
             </div>
 
             <div class="mb-3">
-                <label for="title" class="form-label">Upload listing image</label>
-                <input id="title" name="listing[title]" type="file" class="form-control" required>
-                <div class="valid-feedback">It look like good</div>
+                <label for="imageFile" class="form-label">Upload listing image</label>
+                <input id="imageFile" name="imageFile" type="file" accept="image/*" class="form-control">
+                <div class="form-text">Choose an image from your PC or leave blank to use an image URL below.</div>
             </div>
-            
+
             <div class="mb-3">
                 <label for="description" class="form-label">Description</label>
                 <textarea id="description" name="listing[description]" placeholder="Enter description" class="form-control" required></textarea>
@@ -118,57 +118,3 @@
         }
     </style>
 </footer>
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WanderLust</title>
-</head>
-<body>
-    <h3>create a new listing</h3>
-    <form method="POST" action="/listings">
-        <div class="mb-3">
-            <label for="title" class="form-label">Title</label>
-            <input name="listing[title]" placeholder="enter title" type="text"  class="form-control"/>
-        </div>
-        
-        <br/><br/>
-        <div>
-            <label for="description" class="form-lable">Description</label>
-            <textarea name="listing[description]"   class="form-control"></textarea>
-        </div>
-        
-       
-        <div>
-            <label for="image" class="form-lable">Image Link</label>
-            <input name="listing[image]"  placeholder="image url/link" type="text" class="form-control"/>
-        </div>
-        
-       
-        <br/><br/>
-        <div>
-            <label for="price" class="form-lable">Price</label>
-            <input name="listing[price]" placeholder="enter price" type="number" class="form-control">
-    
-        </div>
-        
-        <br/><br/>
-        <div>
-            <label for="country" class="form-lable">Country</label>
-            <input name="listing[country]" placeholder="enter country" type="text" class="form-control">
-    
-        </div>
-        
-        <br/><br/>
-        <div>
-            <label for="location" class="form-lable">Location</label>
-            <input name="listing[location]" placeholder="enter location" type="text">
-    
-        </div>
-       
-        <br/><br/>
-        <button class="btn btn-dark">add</button>
-    </form>
-</body>
-</html> -->
