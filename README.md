@@ -1,4 +1,5 @@
 <div align="center">
+
 # 🏡 Romify
 
 ### Discover • Explore • Experience
@@ -14,10 +15,11 @@ A modern full-stack accommodation marketplace built with the MERN ecosystem, ena
 <img src="https://img.shields.io/badge/JavaScript-ES6-yellow?style=for-the-badge&logo=javascript">
 <img src="https://img.shields.io/badge/Passport.js-Authentication-blue?style=for-the-badge">
 <img src="https://img.shields.io/badge/Cloudinary-Image_Storage-orange?style=for-the-badge">
+<img src="https://img.shields.io/badge/Groq-AI_Powered-purple?style=for-the-badge">
 
 <br><br>
 
-<h3>🚀 Full-Stack Property Rental Platform</h3>
+<h3>🚀 Full-Stack Property Rental Platform with AI-Powered Recommendations</h3>
 
 </div>
 
@@ -25,45 +27,113 @@ A modern full-stack accommodation marketplace built with the MERN ecosystem, ena
 
 ## 🌟 About The Project
 
-Romify is a feature-rich accommodation marketplace that allows users to discover unique stays, create and manage property listings, upload images, and share experiences through reviews.
+**Romify** is a feature-rich accommodation marketplace that allows users to discover unique stays, create and manage property listings, upload images, and share experiences through reviews.
 
-Built using modern web technologies and following the MVC architecture, the platform delivers a scalable, secure, and user-friendly experience.
+The platform also includes an **AI-Powered Smart Stay Recommender** that understands natural-language travel requirements and intelligently matches users with the most relevant properties.
+
+Built using modern web technologies and following the **MVC architecture**, Romify delivers a scalable, secure, and user-friendly accommodation discovery experience.
 
 ---
 
 ## ✨ Key Features
 
 ### 🔐 Authentication & Security
-- Secure User Registration & Login
-- Passport.js Authentication
-- Session Management
-- Cookie-Based Authentication
-- Protected Routes & Authorization
+
+* Secure User Registration & Login
+* Passport.js Authentication
+* Session Management
+* Cookie-Based Authentication
+* Protected Routes & Authorization
 
 ### 🏠 Listing Management
-- Create New Listings
-- Edit Existing Listings
-- Delete Listings
-- Detailed Listing Pages
-- Dynamic Image Uploads
+
+* Create New Listings
+* Edit Existing Listings
+* Delete Listings
+* Detailed Listing Pages
+* Dynamic Image Uploads
+* Property Capacity & Amenities
+* Property Ratings
+
+### 🤖 AI-Powered Smart Stay Recommender
+
+Romify uses AI to understand what users are looking for and recommend properties based on their natural-language travel requirements.
+
+#### ✨ Features
+
+* 🧠 **Natural Language Understanding**
+
+  * Users can describe their travel plans in plain English.
+  * Example:
+
+    > "I'm going to Manali with 3 friends. I need a peaceful place with mountain views, Wi-Fi and parking under ₹5000."
+
+* 🎯 **Intelligent Property Matching**
+
+  * AI extracts important requirements such as:
+
+    * Location
+    * Budget
+    * Group size
+    * Amenities
+    * Property preferences
+
+* ⭐ **Match Scoring**
+
+  * Every recommendation receives a percentage-based match score.
+
+* 🏆 **Ranked Recommendations**
+
+  * Properties are automatically sorted from the best match to the least relevant match.
+
+* 💡 **AI Explanations**
+
+  * Each recommendation includes an explanation describing why the property matches the user's requirements.
+
+#### 📊 Matching Algorithm
+
+The recommendation engine evaluates multiple factors:
+
+| Matching Factor | Weight |
+| --------------- | -----: |
+| 💰 Budget       |    25% |
+| 📍 Location     |    25% |
+| 👥 Capacity     |    15% |
+| 🛎️ Amenities   |    20% |
+| ✨ Preferences   |    15% |
+
+#### 🧠 AI Technology
+
+* **Groq API**
+* **Mixtral 8x7B**
+* Natural Language Processing
+* Rule-Based Fallback Parsing
+* Weighted Recommendation Algorithm
+
+The system also includes fallback parsing using regex patterns, allowing basic recommendation functionality even when the AI API is unavailable.
 
 ### ⭐ Reviews & Feedback
-- Add Reviews
-- Delete Reviews
-- User Interaction System
-- Real-Time Feedback Experience
+
+* Add Reviews
+* Delete Reviews
+* User Interaction System
+* Property Feedback
+* Rating-Based Property Evaluation
 
 ### ☁️ Cloud Integration
-- Cloudinary Image Storage
-- Optimized Media Delivery
-- Secure Image Management
-- Scalable Cloud Infrastructure
+
+* Cloudinary Image Storage
+* Optimized Media Delivery
+* Secure Image Management
+* Scalable Cloud Infrastructure
 
 ### 🎨 User Experience
-- Responsive EJS Templates
-- Flash Messages
-- Clean UI Design
-- Mobile-Friendly Layout
+
+* Responsive EJS Templates
+* Flash Messages
+* Clean UI Design
+* Mobile-Friendly Layout
+* Modern AI Recommendation Interface
 
 ---
 
@@ -91,6 +161,11 @@ Built using modern web technologies and following the MVC architecture, the plat
 </tr>
 
 <tr>
+<td align="center"><b>AI / NLP</b></td>
+<td>Groq API, Mixtral 8x7B, Axios</td>
+</tr>
+
+<tr>
 <td align="center"><b>Cloud Services</b></td>
 <td>Cloudinary</td>
 </tr>
@@ -106,48 +181,183 @@ Built using modern web technologies and following the MVC architecture, the plat
 ## 🏗️ Project Architecture
 
 ```text
-Client
-   │
-   ▼
-Routes
-   │
-   ▼
-Controllers
-   │
-   ▼
-Models (MongoDB)
-   │
-   ▼
-Views (EJS)
+                         ┌─────────────────────┐
+                         │       Client        │
+                         │     EJS + JS        │
+                         └──────────┬──────────┘
+                                    │
+                                    ▼
+                         ┌─────────────────────┐
+                         │       Routes       │
+                         └──────────┬──────────┘
+                                    │
+                    ┌───────────────┴───────────────┐
+                    ▼                               ▼
+          ┌─────────────────┐             ┌──────────────────┐
+          │   Controllers   │             │ Recommendation   │
+          │                 │             │    Controller    │
+          └────────┬────────┘             └────────┬─────────┘
+                   │                               │
+                   │                               ▼
+                   │                    ┌──────────────────┐
+                   │                    │   Groq AI / NLP  │
+                   │                    │     Processing   │
+                   │                    └────────┬─────────┘
+                   │                             │
+                   └──────────────┬──────────────┘
+                                  ▼
+                         ┌─────────────────────┐
+                         │   Models / MongoDB  │
+                         └─────────────────────┘
 ```
 
 ---
 
-## 📂 Project Structure
+## 🤖 AI Recommendation Flow
 
-```bash
-Romify/
-│
-├── controllers/
-├── models/
-├── routes/
-├── middleware/
-├── utils/
-├── public/
-│   ├── css/
-│   ├── js/
-│   └── images/
-│
-├── views/
-│   ├── layouts/
-│   ├── listings/
-│   ├── users/
-│   └── includes/
-│
-├── app.js
-├── package.json
-└── README.md
+```text
+User Natural Language Query
+            │
+            ▼
+      Groq AI / NLP
+            │
+            ▼
+   Extract Requirements
+            │
+     ┌──────┼─────────┐
+     ▼      ▼         ▼
+ Location Budget   Amenities
+     │      │         │
+     └──────┼─────────┘
+            ▼
+     Search Listings
+            │
+            ▼
+    Calculate Match Score
+            │
+            ▼
+      Rank Properties
+            │
+            ▼
+   Top 5 Recommendations
+            │
+            ▼
+ Property + Score + Explanation
 ```
+
+---
+
+## 🎯 AI Recommendation Example
+
+### User Query
+
+```text
+I'm going to Manali with 3 friends.
+We need a peaceful place with mountain views,
+Wi-Fi and parking, under ₹5000 per night.
+```
+
+### AI Processing
+
+The system extracts:
+
+```text
+Location     → Manali
+Budget       → ₹5000/night
+Group Size   → 3-4 people
+Amenities    → Wi-Fi, Parking
+Preferences  → Mountain Views, Peaceful
+```
+
+### Example Recommendation
+
+```text
+🏆 Mountain View Villa
+
+Match Score: 94%
+
+✓ Within your budget
+✓ Suitable for your group
+✓ Located in Manali
+✓ Wi-Fi available
+✓ Parking available
+✓ Strong match for mountain-view preference
+
+AI Explanation:
+"Excellent match for your budget and group size.
+The property provides Wi-Fi and parking and strongly
+matches your preference for a peaceful mountain-view stay."
+```
+
+---
+
+## 🔗 AI Recommendation API
+
+### GET `/recommendations`
+
+Displays the AI recommendation interface.
+
+### POST `/recommendations/search`
+
+Processes a natural-language travel query.
+
+#### Request
+
+```json
+{
+  "query": "I want a villa in Goa with pool under ₹8000"
+}
+```
+
+#### Response
+
+```json
+{
+  "success": true,
+  "recommendations": [
+    {
+      "_id": "...",
+      "title": "Beachfront Resort in Goa",
+      "location": "Goa",
+      "price": 3500,
+      "capacity": 2,
+      "amenities": [
+        "Wi-Fi",
+        "Beach Access",
+        "Pool"
+      ],
+      "rating": 4.6,
+      "matchScore": 92,
+      "explanation": "Perfect match for your budget, features the pool you requested, and has excellent beach access in Goa."
+    }
+  ]
+}
+```
+
+---
+
+## 🗂️ AI Recommendation Data Model
+
+For the AI recommender to work effectively, listings support additional information such as:
+
+```javascript
+{
+  title: "Mountain View Villa",
+  description: "Peaceful villa surrounded by mountains",
+  price: 4200,
+  location: "Manali",
+  country: "India",
+  capacity: 4,
+  amenities: [
+    "Wi-Fi",
+    "Parking",
+    "Kitchen"
+  ],
+  rating: 4.8
+}
+```
+
+These attributes are used by the recommendation engine to calculate property relevance.
 
 ---
 
@@ -171,9 +381,13 @@ cd romify
 npm install
 ```
 
-### Configure Environment Variables
+This installs all required dependencies including **Axios** for AI API communication.
 
-Create a `.env` file:
+---
+
+## 🔑 Environment Variables
+
+Create a `.env` file in the project root:
 
 ```env
 ATLASDB_URL=your_mongodb_connection_string
@@ -183,9 +397,23 @@ CLOUD_API_KEY=your_cloudinary_api_key
 CLOUD_API_SECRET=your_cloudinary_api_secret
 
 SECRET=your_session_secret
+
+GROQ_API_KEY=your_groq_api_key
+
+NODE_ENV=development
 ```
 
-### Start the Application
+### Get a Groq API Key
+
+Create a free Groq API key from:
+
+[Groq API Console](https://console.groq.com/keys?utm_source=chatgpt.com)
+
+> Never commit your `.env` file or API keys to GitHub.
+
+---
+
+## ▶️ Run the Application
 
 ```bash
 node app.js
@@ -197,11 +425,78 @@ or
 npm start
 ```
 
+Then open:
+
+```text
+http://localhost:8080
+```
+
+For the AI recommendation interface:
+
+```text
+http://localhost:8080/recommendations
+```
+
+---
+
+## 📂 Project Structure
+
+```bash
+Romify/
+│
+├── controllers/
+│   └── ...
+│
+├── controler/
+│   └── recommendation.js
+│
+├── models/
+│   └── listing.js
+│
+├── routes/
+│   └── ...
+│
+├── middleware/
+│   └── ...
+│
+├── utils/
+│   └── recommendationAI.js
+│
+├── public/
+│   ├── css/
+│   ├── js/
+│   └── images/
+│
+├── views/
+│   ├── layouts/
+│   ├── listings/
+│   ├── recommendations/
+│   │   └── index.ejs
+│   ├── users/
+│   └── includes/
+│
+├── init/
+│   └── data.js
+│
+├── app.js
+├── package.json
+├── .env.example
+└── README.md
+```
+
 ---
 
 ## 🎯 Key Highlights
 
-✅ Full-Stack MERN Application
+✅ Full-Stack MERN Ecosystem
+
+✅ AI-Powered Natural Language Recommendations
+
+✅ Intelligent Property Matching
+
+✅ Match Score & AI Explanations
+
+✅ Groq + Mixtral AI Integration
 
 ✅ Secure Authentication System
 
@@ -209,7 +504,7 @@ npm start
 
 ✅ Cloud-Based Image Management
 
-✅ Responsive User Interface
+✅ Responsive EJS Interface
 
 ✅ Scalable MVC Architecture
 
@@ -217,20 +512,19 @@ npm start
 
 ✅ Flash Messaging System
 
-✅ Production-Level Project Structure
-
 ---
 
 ## 📸 Screenshots
 
-Add your project screenshots here.
+### 🏠 Homepage
 
-<img width="1917" height="971" alt="Screenshot 2026-06-04 133829" src="https://github.com/user-attachments/assets/a9deef6c-d559-4aed-8417-13c466c6a1fc" />
+<img width="1917" height="971" alt="Romify Homepage" src="https://github.com/user-attachments/assets/a9deef6c-d559-4aed-8417-13c466c6a1fc" />
 
+### 🏡 Listings
 
-<img width="1912" height="940" alt="Screenshot 2026-06-04 133431" src="https://github.com/user-attachments/assets/48b12ab8-fac9-4c49-b963-aec84557135b" />
+<img width="1912" height="940" alt="Romify Listings" src="https://github.com/user-attachments/assets/48b12ab8-fac9-4c49-b963-aec84557135b" />
 
-
+### 📁 Recommended Screenshot Structure
 
 ```text
 screenshots/
@@ -239,33 +533,46 @@ screenshots/
 ├── listings.png
 ├── property-details.png
 ├── login.png
-└── reviews.png
+├── reviews.png
+└── ai-recommendations.png
 ```
 
 ---
 
 ## 📚 Learning Outcomes
 
-- Full-Stack Development
-- RESTful API Development
-- Authentication & Authorization
-- MongoDB Data Modeling
-- Cloudinary Integration
-- Session & Cookie Management
-- MVC Architecture
-- Scalable Application Design
+Through Romify, the project demonstrates practical experience in:
+
+* Full-Stack Web Development
+* RESTful API Development
+* Natural Language Processing
+* AI API Integration
+* Recommendation Systems
+* Weighted Matching Algorithms
+* Authentication & Authorization
+* MongoDB Data Modeling
+* Cloudinary Integration
+* Session & Cookie Management
+* MVC Architecture
+* Responsive UI Development
+* Scalable Application Design
 
 ---
 
 ## 🔮 Future Enhancements
 
-- 🔍 Advanced Search & Filters
-- 🗺️ Interactive Maps
-- ❤️ Wishlist Feature
-- 💳 Payment Integration
-- 📱 Progressive Web App
-- 🔔 Real-Time Notifications
-- 🌐 Multi-Language Support
+* 🔍 Advanced Search & Filters
+* 🗺️ Interactive Maps
+* ❤️ Wishlist Feature
+* 💳 Payment Integration
+* 📱 Progressive Web App
+* 🔔 Real-Time Notifications
+* 🌐 Multi-Language Support
+* 🧠 Personalized Recommendations using User History
+* 📊 Recommendation Analytics
+* 🏡 Similar Property Recommendations
+* ⭐ Recommendation Learning from User Feedback
+* 🕒 Recommendation History
 
 ---
 
@@ -275,8 +582,8 @@ screenshots/
 
 **B.Tech Undergraduate | NIT Kurukshetra**
 
-💻 Full Stack Developer  
-🤖 Machine Learning Enthusiast  
+💻 Full Stack Developer
+🤖 Machine Learning Enthusiast
 🌟 Open Source Contributor
 
 ---
@@ -285,6 +592,6 @@ screenshots/
 
 ### ⭐ If you like this project, consider giving it a star!
 
-Built with ❤️ using Node.js, Express.js, MongoDB, EJS, Passport.js & Cloudinary
+Built with ❤️ using Node.js, Express.js, MongoDB, EJS, Passport.js, Cloudinary & Groq AI
 
 </div>
