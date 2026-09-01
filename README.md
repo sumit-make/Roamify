@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🏡 Romify
+#  Romify
 
 ### Discover • Explore • Experience
 
@@ -25,7 +25,7 @@ A modern full-stack accommodation marketplace built with the MERN ecosystem, ena
 
 ---
 
-## 🌟 About The Project
+##  About The Project
 
 **Romify** is a feature-rich accommodation marketplace that allows users to discover unique stays, create and manage property listings, upload images, and share experiences through reviews.
 
@@ -582,9 +582,8 @@ Through Romify, the project demonstrates practical experience in:
 
 **B.Tech Undergraduate | NIT Kurukshetra**
 
-💻 Full Stack Developer
-🤖 Machine Learning Enthusiast
-🌟 Open Source Contributor
+ Full Stack Developer
+Open Source Contributor
 
 ---
 
